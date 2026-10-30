@@ -3,15 +3,20 @@ owner: jansenkarl
 repo: rtfm-status
 user-agent: rtfm-status
 
+# icon: our own mark, so visitors' browsers don't fetch site icons from DuckDuckGo.
 sites:
   - name: Licensing API
     url: https://license-api.rtfmdesign.com/health
+    icon: https://status.rtfmdesign.com/logo.svg
   - name: Product verification keys
     url: https://license-api.rtfmdesign.com/v1/products/rtfm-player/verification-keys
+    icon: https://status.rtfmdesign.com/logo.svg
   - name: License Manager
     url: https://lm.rtfmdesign.com/
+    icon: https://status.rtfmdesign.com/logo.svg
   - name: Customer self-service
     url: https://lm.rtfmdesign.com/deactivate/rtfm-player
+    icon: https://status.rtfmdesign.com/logo.svg
 
 # Downtime issues are assigned to the owner, so GitHub emails them (no SMTP secrets needed).
 assignees:

@@ -39,7 +39,8 @@ p, small, .muted { color: #a3a8b3; }
 
 /* The response-time graphs are background images in Upptime's teal: a filtered copy on top turns them pistachio. */
 article.graph { position: relative; }
-article.graph::before { content: ""; position: absolute; inset: 0; background: inherit; border: 0; filter: var(--graph-filter);
+article.graph::before { content: ""; position: absolute; inset: 0; background: inherit; background-color: transparent; border: 0;
+  filter: var(--graph-filter);
   opacity: var(--graph-opacity); pointer-events: none; }
 article.graph > * { position: relative; z-index: 1; }
 /* The summary line: a pistachio dot in place of the emoji (removed by the status-website js in .upptimerc.yml). */
@@ -48,3 +49,5 @@ article.up:not(.graph)::before, article.down:not(.graph)::before, article.degrad
   background: var(--up-border-left-color); }
 article.down:not(.graph)::before { background: var(--down-border-left-color); }
 article.degraded:not(.graph)::before { background: var(--degraded-border-left-color); }
+/* A component's page draws its response-time chart on a canvas, also in teal. */
+canvas { filter: var(--graph-filter); }
