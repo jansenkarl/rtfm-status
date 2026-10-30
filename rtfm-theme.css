@@ -31,7 +31,20 @@
   --graph-filter: hue-rotate(-88deg) saturate(0.75) brightness(1.15);
 }
 html, body { background: var(--body-background-color); }
-body, button, input { font-family: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, sans-serif; }
+/* Upptime's global.css loads after this file and sets its own font. */
+html body, html body button, html body input { font-family: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, sans-serif !important; }
 a { color: #cde89a; }
 h1, h2, h3 { letter-spacing: -0.02em; font-weight: 650; }
 p, small, .muted { color: #a3a8b3; }
+
+/* The response-time graphs are background images in Upptime's teal: a filtered copy on top turns them pistachio. */
+article.graph { position: relative; }
+article.graph::before { content: ""; position: absolute; inset: 0; background: inherit; border: 0; filter: var(--graph-filter);
+  opacity: var(--graph-opacity); pointer-events: none; }
+article.graph > * { position: relative; z-index: 1; }
+/* The summary line: a pistachio dot in place of the emoji (removed by the status-website js in .upptimerc.yml). */
+article.up:not(.graph)::before, article.down:not(.graph)::before, article.degraded:not(.graph)::before {
+  content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; vertical-align: 1px;
+  background: var(--up-border-left-color); }
+article.down:not(.graph)::before { background: var(--down-border-left-color); }
+article.degraded:not(.graph)::before { background: var(--degraded-border-left-color); }
