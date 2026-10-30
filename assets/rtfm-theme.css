@@ -1,0 +1,37 @@
+/* RTFM License Manager's dark palette (lm.rtfmdesign.com, site/src/styles/tokens.css): charcoal surfaces, soft text,
+   pistachio as the only green. The status page always uses it, whatever the visitor's system theme. */
+@font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("fonts/instrument-sans-latin-wght-normal.woff2") format("woff2"); }
+:root {
+  color-scheme: dark;
+  --body-background-color: #17191e;
+  --body-text-color: #dcdfe5;
+  --card-background-color: #1f2228;
+  --nav-background-color: #17191e;
+  --nav-border-bottom-color: rgba(255, 255, 255, 0.07);
+  --nav-current-border-bottom-color: #cde89a;
+  --card-border-color: rgba(255, 255, 255, 0.07);
+  --down-border-left-color: #ee9a8a;
+  --down-background-color: rgba(240, 120, 100, 0.13);
+  --degraded-border-left-color: #e8bd78;
+  --up-border-left-color: #cde89a;
+  --tag-color: #17191e;
+  --tag-up-background-color: #cde89a;
+  --tag-down-background-color: #ee9a8a;
+  --tag-degraded-background-color: #e8bd78;
+  --change-background-color: #e8bd78;
+  --error-button-border-color: #bfdd86;
+  --error-button-background-color: #cde89a;
+  --error-button-color: #2b3a12;
+  --submit-button-border-color: #bfdd86;
+  --submit-button-background-color: #cde89a;
+  --submit-button-color: #2b3a12;
+  --graph-opacity: 0.85;
+  /* Upptime draws its graphs in teal; turn them pistachio. */
+  --graph-filter: hue-rotate(-88deg) saturate(0.75) brightness(1.15);
+}
+html, body { background: var(--body-background-color); }
+body, button, input { font-family: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, sans-serif; }
+a { color: #cde89a; }
+h1, h2, h3 { letter-spacing: -0.02em; font-weight: 650; }
+p, small, .muted { color: #a3a8b3; }

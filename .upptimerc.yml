@@ -19,6 +19,8 @@ assignees:
 
 status-website:
   cname: status.rtfmdesign.com
+  # RTFM's dark palette and fonts (assets/rtfm-theme.css), in place of Upptime's teal light and dark themes.
+  themeUrl: https://status.rtfmdesign.com/rtfm-theme.css
   logoUrl: https://raw.githubusercontent.com/jansenkarl/rtfm-status/master/assets/logo.svg
   name: RTFM License Manager status
   introTitle: "RTFM License Manager status"
@@ -26,6 +28,8 @@ status-website:
     Live checks of the licensing service, every few minutes, from outside RTFM's hosting. Apps that are already
     activated keep working through an outage: they renew their licenses only every few weeks and carry signed
     offline leases.
+  i18n:
+    allSystemsOperational: All systems are operational
   navbar:
     - title: Status
       href: /
