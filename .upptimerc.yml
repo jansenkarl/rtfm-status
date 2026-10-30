@@ -28,8 +28,12 @@ status-website:
     Live checks of the licensing service, every few minutes, from outside RTFM's hosting. Apps that are already
     activated keep working through an outage: they renew their licenses only every few weeks and carry signed
     offline leases.
-  i18n:
-    allSystemsOperational: All systems are operational
+  # Drops the emoji Upptime puts before the summary line; rtfm-theme.css draws a colored dot instead.
+  js: >-
+    new MutationObserver(function () { document.querySelectorAll('article:not(.graph)').forEach(function (a) {
+    var t = a.firstChild; if (t && t.nodeType === 3 && /^[^\sA-Za-z]+[\s\u00a0]+/.test(t.textContent))
+    t.textContent = t.textContent.replace(/^[^\sA-Za-z]+[\s\u00a0]+/, ''); }); })
+    .observe(document.documentElement, { childList: true, subtree: true, characterData: true });
   navbar:
     - title: Status
       href: /
